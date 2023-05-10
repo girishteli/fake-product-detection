@@ -3,7 +3,8 @@ import { ethers } from "ethers";
 import { Loader } from './Loader';
 import OwnerHistory from './OwnerHistory';
 import { contractABI, contractAddress, options, url } from '../lib';
-import QRCode from 'react-qr-code';
+import QRScanner from './QRReader';
+import CheckProductByQR from './CheckProductByQR';
 
 const CheckProduct = () => {
 
@@ -77,6 +78,8 @@ const CheckProduct = () => {
                         placeholder="Enter the product ID"
                     />
                 </form>
+                {/* <QRScanner/> */}
+                {/* <CheckProductByQR/> */}
                 {isLoading && <div className='mx-auto py-6 flex justify-center'><Loader /></div>}
 
                 {productDetail && <div class="justify-center text-center">

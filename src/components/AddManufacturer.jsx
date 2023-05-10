@@ -2,8 +2,10 @@ import React, { useState } from 'react'
 import { ethers } from "ethers";
 import { Loading } from './Loader';
 import { contractABI, contractAddress } from '../lib';
+import Apply from './reactqr';
 
 const AddManufacturer = () => {
+   
     const [isLoading, setIsLoading] = useState(false)
 
     const [manufacturer, setManufacturer] = useState({
@@ -48,6 +50,7 @@ const AddManufacturer = () => {
             setIsLoading(false)
         }
     }
+    
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -91,13 +94,14 @@ const AddManufacturer = () => {
                                 />
                             </label>
 
-                            <div class="">
+                            <div style = {{display:"flex", alignItems:"center"}}>
                                 <button
                                     type="submit"
                                     class="h-10 px-5 text-indigo-100 bg-indigo-700 rounded-lg transition-colors duration-150 focus:shadow-outline hover:bg-indigo-800"
                                 >
                                     Register
                                 </button>
+                                <Apply/>
                             </div>
                             <div>
                             </div>
@@ -108,5 +112,6 @@ const AddManufacturer = () => {
         </>
     )
 }
+
 
 export default AddManufacturer

@@ -2,6 +2,7 @@ import React, { useRef } from 'react'
 import CheckManufacturer from './CheckManufacturer'
 import CheckProduct from './CheckProduct'
 import Eth from "../imgs/eth.svg"
+// import CheckProductByQR from './CheckProductByQR'
 
 const Home = () => {
     const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop)
@@ -12,6 +13,12 @@ const Home = () => {
 
     }
     return (
+        
+    
+
+
+
+
         <>
             <section>
                 <div class="
@@ -184,8 +191,14 @@ const Home = () => {
                 <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
                     <div className="px-4 py-6 sm:px-0" ref={myRef} id="box">
                         <div class="grid grid-cols-1">
+            
                             <CheckProduct />
+                            {/* <CheckProductByQR /> */}
                             <CheckManufacturer />
+                            
+  
+                            
+                            
                         </div>
                     </div>
                 </div>
@@ -194,4 +207,6 @@ const Home = () => {
     )
 }
 
-export default Home
+
+
+export default Home;
